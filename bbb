@@ -1,0 +1,8 @@
+NFS booting BBB
+
+setenv ipaddr 192.168.17.102
+setenv serverip 192.168.17.100
+tftpboot 0x80200000 zImage
+tftpboot 0x815f0000 zImage-am335x-boneblack.dtb
+setenv bootargs console=ttyO0,115200n8 root=/dev/nfs rw nfsroot=192.168.17.100:/srv/nfs/bbb/,nolock, wsize=1024, rsize=1024 rootwait init=/linuxrc rootdelay=5 ip=192.168.17.102
+bootz 0x80200000 - 0x815f0000
