@@ -1,6 +1,6 @@
 NFS booting BBB
 
-setenv ipaddr 192.168.17.102
+setenv ipaddr 192.168.17.103
 setenv serverip 192.168.17.100
 tftpboot 0x80200000 zImage
 tftpboot 0x815f0000 zImage-am335x-boneblack.dtb
